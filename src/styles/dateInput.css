@@ -122,3 +122,74 @@
     height: 6px;
     border-radius: 999px;
   }
+
+  @media (max-width: 600px) {
+    .calendar-card {
+      padding: 10px 8px 12px;
+    }
+
+    .date-input, .date-input input {
+    width: 100%;
+    }
+
+    .date-input input {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+  
+    .calendar-header {
+      margin-bottom: 6px;
+    }
+  
+    .calendar-month-label {
+      font-size: 13px;
+    }
+  
+    .calendar-weekdays {
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+  
+    .calendar-grid {
+      gap: 3px;
+    }
+  
+    .calendar-cell.day {
+      padding: 3px 4px;
+      border-radius: 8px;
+      font-size: 11px;
+    }
+  
+    /* Öneri kartları – mobilde tek sütun daha rahat */
+    .suggestions-grid {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+  
+    .suggestion-title {
+      font-size: 13px;
+    }
+  
+    .suggestion-sub {
+      font-size: 11px;
+    }
+  
+    .suggestion-back-title {
+      font-size: 12px;
+    }
+  
+    .suggestion-list {
+      font-size: 11px;
+    }
+
+    .save-btn {
+      width: auto;
+      min-width: 72px;
+      height: 36px;
+      padding: 0 14px;
+      font-size: 13px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+  }

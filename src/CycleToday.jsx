@@ -347,7 +347,7 @@ export default function CycleToday({ onPhaseChange }) {
 
             const bgColor =
               cell.phase && cell.phase.color
-                ? cell.phase.color + "22"
+                ? cell.phase.color + "45"
                 : "transparent";
 
             return (

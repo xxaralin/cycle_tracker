@@ -250,3 +250,62 @@ body {
   background: rgba(0, 0, 0, 0.12);
   transform: scale(1.05);
 }
+
+/* ------------- MOBILE ------------- */
+
+@media (max-width: 600px) {
+  .app-root {
+    padding: 12px 6px;
+    align-items: stretch;
+  }
+
+  .cycle-container {
+    max-width: 100%;
+    border-radius: 18px;
+    padding: 16px 14px 20px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .button {
+    font-size: 13px;
+    padding: 9px 0;
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+
+  .phase-title {
+    font-size: 16px;
+    margin: 8px 0 4px;
+  }
+
+  .phase-summary {
+    font-size: 12px;
+  }
+
+  .workout-btn {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+}
