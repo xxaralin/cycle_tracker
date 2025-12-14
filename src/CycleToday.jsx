@@ -297,7 +297,7 @@ export default function CycleToday({ onPhaseChange }) {
           />
         </label>
 
-        <label className="label">
+        <label className="label cycle-length-label">
           Döngü uzunluğu (gün):
           <input
             type="number"
@@ -309,7 +309,7 @@ export default function CycleToday({ onPhaseChange }) {
           />
         </label>
 
-        <button type="submit" className="button">
+        <button type="submit" className="button save-btn">
           Kaydet
         </button>
       </form>
