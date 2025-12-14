@@ -1,0 +1,124 @@
+/* dateInput styles */
+
+.date-input {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  .date-input input {
+    width: 48px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+  }
+  
+  .date-input input:focus {
+    outline: none;
+    border-color: #fb7185;
+    box-shadow: 0 0 0 1px #fecaca;
+  }
+  
+  .calendar-card {
+    margin-top: 8px;
+    border-radius: 18px;
+    padding: 12px 10px 14px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .calendar-header button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 999px;
+    color: #4b5563;
+  }
+  
+  .calendar-header button:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .calendar-month-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #3a69aa;
+  }
+  
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 11px;
+    text-align: center;
+    color: #9ca3af;
+    margin-bottom: 4px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  
+  .calendar-cell {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+  }
+  
+  .calendar-cell.empty {
+    background: transparent;
+  }
+  
+  .calendar-cell.day {
+    position: relative;
+    border: 1px solid transparent;
+    font-size: 12px;
+    color: #111827;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 5px;
+    cursor: pointer;
+  }
+  
+  .calendar-cell.day:hover {
+    border-color: #e5e7eb;
+  }
+  
+  .calendar-cell.day.selected {
+    border-color: #111827;
+    box-shadow: 0 0 0 1px #111827;
+  }
+  
+  .calendar-cell.day.today::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 10px;
+    border: 1px dashed #6b7280;
+  }
+  
+  .calendar-day-number {
+    font-weight: 500;
+  }
+  
+  .calendar-phase-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+  }

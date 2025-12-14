@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: radial-gradient(circle at top, #fee2e2, #eff6ff);
+  min-height: 100vh;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.cycle-container {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 20px 18px 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #1f2937;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #a098e5;
+}
+
+.input {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #fb7185;
+  box-shadow: 0 0 0 1px #fecaca;
+}
+
+.button {
+  margin-top: 25px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  background: linear-gradient(90deg, #fb7185, #facc15, #4ade80, #60a5fa);
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.95;
+}
+
+.card {
+  border-radius: 18px;
+  padding: 16px 14px; 
+  background-color: rgba(255, 255, 255, 0.9); 
+  border: 1px solid #d1d5db; 
+  color: #3a69aa; 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.card-inner {
+  height: 100%;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.phase-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: #1f2937;
+}
+
+.details {
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;           /* iç kartın kalan alanını alsın */
+  margin-top: 8px;
+}
+
+.hint {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+
+/* 🎉 Workout butonu */
+
+.workout-btn {
+  margin-top: 10px;  /* istersen auto da olur ama gerek yok */
+  width: 100%;
+  padding: 9px 0;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  color: white;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.2s ease;
+  box-shadow: 0 8px 18px rgba(34, 197, 94, 0.35);
+}
+
+.workout-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.45);
+}
+
+.workout-btn-done {
+  background: linear-gradient(90deg, #6b7280, #9ca3af);
+  box-shadow: 0 6px 14px rgba(107, 114, 128, 0.4);
+}
+
+/* 🎊 Konfeti */
+
+.confetti-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -10px;
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  background: hsl(calc(360 * var(--hue, 0)), 90%, 60%);
+  animation-name: confetti-fall;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.confetti-piece:nth-child(3n) {
+  background: #fb7185;
+}
+.confetti-piece:nth-child(3n + 1) {
+  background: #facc15;
+}
+.confetti-piece:nth-child(3n + 2) {
+  background: #4ade80;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(240deg);
+    opacity: 0;
+  }
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.suggestion-title {
+  margin: 0;
+  font-size: 14px;
+}
+
+.suggestion-sub {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.suggestion-back-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.suggestion-list {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.refresh-btn {
+  position: absolute;
+  top: 4px;       /* başlığa hizalanır */
+  right: -2px;     /* köşeye daha oturur */
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.2s ease, transform 0.15s ease;
+  padding: 0;      /* kritikkkkk: padding sıfır olmalı */
+}
+
+.refresh-btn:hover {
+  background: rgba(0, 0, 0, 0.12);
+  transform: scale(1.05);
+}
