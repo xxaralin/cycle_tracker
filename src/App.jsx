@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import './App.css'
 import './styles/dateInput.css'
 import './styles/cat.css'
-
+import './App.css'
 import CycleToday from './CycleToday'
 import CatBuddy from './CatBuddy'
 
