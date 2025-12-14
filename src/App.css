@@ -314,3 +314,7 @@ body {
     padding: 8px 0;
   }
 }
+
+/* DEBUG: force full width + no rounding (temporary) */
+.app-root { padding: 0 !important; }
+.cycle-container { max-width: none !important; width: 100% !important; border-radius: 0 !important; }
